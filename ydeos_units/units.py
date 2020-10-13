@@ -284,7 +284,7 @@ def convert_imperial(feet: float = 0.,
 
 def fahrenheit(**kwargs):
     r"""Conversion to fahrenheit degrees."""
-    if len(kwargs.items()) != 1:
+    if len(kwargs) != 1:
         raise ValueError("Too many keywords")
 
     if list(kwargs.keys())[0] in ["celsius", "C"]:
