@@ -306,7 +306,7 @@ def farenheits(**kwargs):
 
 def celsius(**kwargs):
     r"""Conversion to celsius degrees."""
-    if len(kwargs.items()) != 1:
+    if len(kwargs) != 1:
         raise ValueError("Too many keywords")
 
     if list(kwargs.keys())[0] in ["fahrenheit", "F"]:
@@ -323,7 +323,7 @@ def C(**kwargs):
 
 def kelvin(**kwargs):
     r"""Conversion to kelvin degrees."""
-    if len(kwargs.items()) != 1:
+    if len(kwargs) != 1:
         raise ValueError("Too many keywords")
 
     if list(kwargs.keys())[0] in ["fahrenheit", "F"]:
