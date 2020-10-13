@@ -1,20 +1,20 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-r"""area.py tests"""
+r"""area.py tests."""
 
 from ydeos_units.units import cm2, convert
 
 
 def test_areas():
-    r"""Test expected values"""
+    r"""Test expected values."""
     expected_value = 1e4
     atol = 1e-10
     assert expected_value - atol <= cm2(m2=1.) <= expected_value + atol
 
 
 def test_convert_function():
-    r"""Test shortcut/api convert function"""
+    r"""Test shortcut/api convert function."""
     expected_value = 1e4
     atol = 1e-10
     assert expected_value - atol <= convert(1., "cm2", "m2") <= expected_value + atol
@@ -22,7 +22,7 @@ def test_convert_function():
 
 
 def test_convert_area_function():
-    r"""Test shortcut/api convert function"""
+    r"""Test shortcut/api convert function."""
     expected_value = 1e4
     atol = 1e-10
     assert expected_value - atol <= convert(1., "cm2", "m2") <= expected_value + atol

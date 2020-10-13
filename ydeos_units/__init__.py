@@ -1,9 +1,9 @@
 # coding: utf-8
 
-r"""ydeos_units __init__"""
+r"""ydeos_units __init__.py."""
 
 
-__name__ = "ydeos_units"
+__project_name__ = "ydeos_units"
 __description__ = "Units conversions"
 
 __version__ = "2020.10.10"

@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-r"""Tests for the geo.py module"""
+r"""Tests for the geo.py module."""
 
 from ydeos_units.units import degrees_minutes_seconds, decimal_degrees
 
 
 def test_decimaldegrees_to_ddmmss():
-    r"""Test conversion from decimal degrees to degrees, minutes, seconds"""
+    r"""Test conversion from decimal degrees to degrees, minutes, seconds."""
     assert degrees_minutes_seconds(decimal_degree=0.) == (0, 0, 0., 0.)
     assert degrees_minutes_seconds(decimal_degree=-0.) == (0, 0, 0., 0.)
 
@@ -17,12 +17,18 @@ def test_decimaldegrees_to_ddmmss():
     assert degrees_minutes_seconds(decimal_degree=45.5) == (45, 30, 30., 0.)
     assert degrees_minutes_seconds(decimal_degree=-45.5) == (-45, -30, -30., 0.)
 
-    assert degrees_minutes_seconds(decimal_degree=45.51) == (45, 30, 30.59999999999988, 35.99999999999284)
-    assert degrees_minutes_seconds(decimal_degree=-45.51) == (-45, -30, -30.59999999999988, -35.99999999999284)
+    assert degrees_minutes_seconds(decimal_degree=45.51) == (45,
+                                                             30,
+                                                             30.59999999999988,
+                                                             35.99999999999284)
+    assert degrees_minutes_seconds(decimal_degree=-45.51) == (-45,
+                                                              -30,
+                                                              -30.59999999999988,
+                                                              -35.99999999999284)
 
 
 def test_ddmm_to_decimaldegrees():
-    r"""Test conversion from degrees and decimal minutes to decimal degrees"""
+    r"""Test conversion from degrees and decimal minutes to decimal degrees."""
     assert decimal_degrees(degrees=0, minutes=0.) == 0.
 
     assert decimal_degrees(degrees=45, minutes=30.59999999999988) == 45.51
@@ -30,7 +36,7 @@ def test_ddmm_to_decimaldegrees():
 
 
 def test_ddmmss_to_decimaldegrees():
-    r"""Test conversion from degrees minutes seconds to decimal degrees"""
+    r"""Test conversion from degrees minutes seconds to decimal degrees."""
     assert decimal_degrees(degrees=0, minutes=0., seconds=0.) == 0.
 
     error = 1e-6
@@ -41,7 +47,7 @@ def test_ddmmss_to_decimaldegrees():
 
 
 def test_degrees_decimalminutes_to_ddmmss():
-    r"""Test combining functions to convert 45°30.5' to 45° 30' 30'' """
+    r"""Test combining functions to convert 45°30.5' to 45° 30' 30'' ."""
     # convert to decimal degrees
     dd = decimal_degrees(degrees=45, minutes=30.5)
     # convert decimal degrees to dd mm ss

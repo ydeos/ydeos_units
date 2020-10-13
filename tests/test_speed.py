@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-r"""speed.py tests"""
+r"""speed.py tests."""
 
 from ydeos_units.units import kmh
 
 
 def test_speed():
-    r"""Test expected values"""
+    r"""Test expected values."""
     expected_value = 1.852
     atol = 1e-10
     assert expected_value - atol <= kmh(knots=1.) <= expected_value + atol

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-r"""Imperial conversions"""
+r"""Imperial conversions."""
 
 from ydeos_units.units import convert_imperial, convert_imperial_str
 

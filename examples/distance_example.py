@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 
-r"""Example distance conversion"""
+r"""Example distance conversion."""
 
 from ydeos_units.units import cm, inches
 
