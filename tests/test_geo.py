@@ -3,7 +3,29 @@
 
 r"""Tests for the geo.py module."""
 
+import pytest
+
 from ydeos_units.units import degrees_minutes_seconds, decimal_degrees
+
+
+def test_decimal_degrees_wrong_input():
+    r"""Asking for impossible things."""
+    with pytest.raises(ValueError):
+        decimal_degrees(0, 60, 0)
+    with pytest.raises(ValueError):
+        decimal_degrees(0, 0, 60)
+    with pytest.raises(ValueError):
+        decimal_degrees(-180.1, 0, 0)
+    with pytest.raises(ValueError):
+        decimal_degrees(180.1, 0, 0)
+
+
+def test_degrees_minutes_seconds_wrong_input():
+    r"""Asking for impossible things."""
+    with pytest.raises(ValueError):
+        degrees_minutes_seconds(-180.1)
+    with pytest.raises(ValueError):
+        degrees_minutes_seconds(180.1)
 
 
 def test_decimaldegrees_to_ddmmss():
